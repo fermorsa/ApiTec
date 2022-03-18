@@ -27,12 +27,9 @@ export default class Actualizarindivsub extends ExternalClient {
     }
 
     public async updateindivsub(params: any, headers:object): Promise<IOResponse<string>>{
-        console.log(`id--> ${params.id} value--> ${params.value}`)
+        console.log(`id--> ${params.id} json--> ${JSON.stringify(params.payload)}`)
         let url = routes.updateindivsub(params.id);
-        let dataCantidad = {
-            cantidad: params.value
-        }
-        let response : IOResponse<any> = await this.http.patch(url, dataCantidad, {
+        let response : IOResponse<any> = await this.http.patch(url, params.payload, {
             headers : headers
         });
         return { data : response.data, headers: response.headers, status: response.status};
