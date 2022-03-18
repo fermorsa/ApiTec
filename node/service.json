@@ -32,7 +32,7 @@
       "public" : true
     },
     "actualizarindivsub" : {
-      "path" : "/_v/actualizarindivsub/:id",
+      "path" : "/_v/actualizarindivsub",
       "public" : true
     }
 

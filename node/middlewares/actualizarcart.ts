@@ -17,21 +17,14 @@ export async function actualizarindivsub(ctx: Context, next: () => Promise<any>)
 	}
 
     let payload = await json(ctx.req);
-    console.log("payload", payload)
-    console.log(`ctx.request.body ${JSON.stringify(ctx)}`)
+    console.log("payload NOW", JSON.stringify(payload[0]))
 
-    const url = ctx.request.url;
-    console.log(`url --> ${url}`)
-    const data = url.split('/')[3];
-    console.log(`params --> ${data}`)
+    // let objData = {
+    //     payload: payload
+    // }
+    // console.log(`data ${JSON.stringify(objData)}`)
 
-    let objData = {
-        id: data.split('|')[0],
-        payload: payload
-    }
-    console.log(`data ${JSON.stringify(objData)}`)
-
-    let responseSpecSku: response = await Actualizarindivsub.updateindivsub(objData, headersRequest)
+    let responseSpecSku: response = await Actualizarindivsub.updateindivsub(payload, headersRequest)
     console.log("el responseSpecSku data:", responseSpecSku.data);
        
     ctx.status = 204
