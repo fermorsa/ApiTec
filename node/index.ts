@@ -8,8 +8,9 @@ import { validate } from './middlewares/validate'
 import { envioproductos } from './middlewares/envioproductos'
 import { producto } from './middlewares/producto'
 import { borradoindivsub } from './middlewares/borradoindivsub'
-import { actualizarindivsub } from './middlewares/actualizarcart'
 import { borradogrupsub } from './middlewares/borradogrupsub'
+import { actualizarindivsub } from './middlewares/actualizarcart'
+import { actualizarflagindivsub } from './middlewares/actualizarflag'
 
 const TIMEOUT_MS = 800
 
@@ -71,6 +72,9 @@ export default new Service({
     }),
     actualizarindivsub: method({
       PATCH: [actualizarindivsub],
+    }),
+    actualizarflagindivsub: method({
+      PATCH: [actualizarflagindivsub],
     })
   },
 })

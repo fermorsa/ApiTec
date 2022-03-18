@@ -19,11 +19,6 @@ export async function actualizarindivsub(ctx: Context, next: () => Promise<any>)
     let payload = await json(ctx.req);
     console.log("payload NOW", JSON.stringify(payload[0]))
 
-    // let objData = {
-    //     payload: payload
-    // }
-    // console.log(`data ${JSON.stringify(objData)}`)
-
     let responseSpecSku: response = await Actualizarindivsub.updateindivsub(payload, headersRequest)
     console.log("el responseSpecSku data:", responseSpecSku.data);
        

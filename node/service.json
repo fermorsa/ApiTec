@@ -34,6 +34,10 @@
     "actualizarindivsub" : {
       "path" : "/_v/actualizarindivsub",
       "public" : true
+    },
+    "actualizarflagindivsub" : {
+      "path" : "/_v/actualizarflagindivsub",
+      "public" : true
     }
 
   }

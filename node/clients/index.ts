@@ -6,6 +6,7 @@ import Status from './status'
 import Borradoindivsub from './borradoindivsub'
 import Borradogrupsub from './borradogrupsub'
 import Actualizarindivsub from './actualizarcart'
+import Actualizarflagindivsub from './actualizarflag'
 
 // Extend the default IOClients implementation with our own custom clients.
 export class Clients extends IOClients {
@@ -35,6 +36,10 @@ export class Clients extends IOClients {
 
   public get actualizarindivsub() {
     return this.getOrSet('actualizarindivsub', Actualizarindivsub)
+  }
+
+  public get actualizarflagindivsub() {
+    return this.getOrSet('actualizarflagindivsub', Actualizarflagindivsub)
   }
 
 }
