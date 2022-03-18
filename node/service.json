@@ -1,0 +1,40 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "status": {
+      "path": "/_v/status/:code",
+      "public": true
+    },
+    "agrupamiento" : {
+      "path" : "/_v/agrupamiento",
+      "public" : true
+    },
+    "envioproductos" : {
+      "path" : "/_v/envioproductos",
+      "public" : true
+    },
+
+    "producto":{
+      "path" : "/_v/producto",
+      "public" : true
+    },
+    "borradoindivsub" : {
+      "path" : "/_v/borradoindivsub",
+      "public" : true
+    },
+    "borradogrupsub" : {
+      "path" : "/_v/borradogrupsub",
+      "public" : true
+    },
+    "actualizarindivsub" : {
+      "path" : "/_v/actualizarindivsub/:id",
+      "public" : true
+    }
+
+  }
+}
